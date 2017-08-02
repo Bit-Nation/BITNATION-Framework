@@ -20,5 +20,5 @@ The framework is created with smart contracts in Solidity. We dedicated a signif
 
 
 # Credits
- -  brought to you by Eliott Teissonniere.
- -  the following is based on the [Aragon codebase](https://github.com/Aragon/aragon-core) along with some modifications to represents our unique vision, in case of major changes we will submit a pull request to integrate our changes in the Aragon upstream project, thus leading to major open source cooperation.
+ -  brought to you by Eliott Teissonniere for [BITNATION](https://bitnation.co).
+ -  the following is based on the [Aragon codebase](https://github.com/Aragon/aragon-core) along with some modifications to represents our unique vision. In case of major changes in the main codebase we would submit a pull request to integrate our changes in the Aragon upstream project, thus leading to a major open source cooperation between both projects.
