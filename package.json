@@ -1,7 +1,7 @@
 {
-  "name": "aragon-core",
+  "name": "bitnation framework",
   "version": "1.0.0",
-  "description": "Core contracts for Aragon",
+  "description": "solidity framework for bitnation",
   "main": "index.js",
   "scripts": {
     "prepublish": "truffle compile",
@@ -14,8 +14,8 @@
     "index.js",
     "build/"
   ],
-  "author": "Jorge Izquierdo (Aragon)",
-  "license": "ISxC",
+  "author": "Eliott Teissonniere (Bitnation)",
+  "license": "GPLv3",
   "dependencies": {
     "babel-polyfill": "^6.23.0",
     "ethereumjs-abi": "^0.6.4",
