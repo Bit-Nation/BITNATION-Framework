@@ -1,31 +1,24 @@
-# Aragon Core <img align="right" src="https://github.com/aragonone/issues/blob/master/logo.png" height="80px" /> [![Build Status](https://travis-ci.org/aragon/aragon-core.svg?branch=master)](https://travis-ci.org/aragon/aragon-core)[![Coverage Status](https://coveralls.io/repos/github/aragon/aragon-core/badge.svg?branch=master)](https://coveralls.io/github/aragon/aragon-core?branch=master)
+# BITNATION framework
 
-#### 🚨 Everything in this repo is highly experimental software.
-It is not secure to use any of this code in production (mainnet) until proper security audits have been conducted. It can result in irreversible loss of funds.
+Welcome to the BITNATION framework!
 
-#### 🦋 We are using [CommitETH](http://commiteth.com) to reward open source contributions outside the Aragon Core team.
-All issues tagged with **[bounty](https://github.com/aragon/aragon-core/labels/bounty)** are eligible for a bounty on a succesfully merged Pull Request that solves the issue. Even if the bounty says 0 ETH, if it has the **bounty** label, it is higher than 0 ETH (until we automate it, we may take a bit to fund the bounties manually).
+The following is a framework to let you create nearly any kind of entity in the ethereum blockchain, example of such entities include:
+ -  a Decentralized Borderless Voluntary Nation (DBVN)
+ -  a Decentralized Autonomous Organization (DAO)
+ -  a Union, like a Marriage or a Co-Living Agreement 
+ -  a Holon, Embassy or a Consulate
+ -  ... (put yours here :wink:)
 
-Open source is awesome, but it is also hard work that needs to be rewarded to ensure top quality work, and that everyone in the world gets a fair chance to do it.
+The framework is created with smart contracts in Solidity. We dedicated a significant amount of work into making the contracts upgradeable, which is still quite rare in the Ethereum smart contract ecosystem.
 
-#### 👋 We are tagging tasks that are [beginner friendly](https://github.com/aragon/aragon-core/labels/beginner-friendly) so you can get started contributing to Aragon Core.
-Don't be shy to contribute even the smallest tweak. Everyone will be specially nice and helpful to beginners to help you get started!
 
-## Documentation
+# TODO list
+ -  [ ] integrate registry
+ -  [ ] add constitution application
+ -  [ ] improve documentation
+ -  [ ] audit
 
-Visit the [wiki](https://github.com/aragon/aragon-core/wiki) for in depth documentation on the [architecture](https://github.com/aragon/aragon-core/wiki/Architecture) and different parts of the system.
 
-## Contributing
-
-To make it easier for contributors to get up to speed, we provide a docker environment that provides all the requirements to build and test Aragon Core.
-
-For more detail you can check the [contributing guide](https://github.com/aragon/aragon-core/wiki/How-to-contribute) on the wiki.
-
-### Requirements
-
- - [Docker](https://www.docker.com/get-docker)
- - [Docker Compose](https://docs.docker.com/compose/install/)
-
-### Run tests
-
-    $ docker-compose run core test
+# Credits
+ -  brought to you by Eliott Teissonniere.
+ -  the following is based on the [Aragon codebase](https://github.com/Aragon/aragon-core) along with some modifications to represents our unique vision, in case of major changes we will submit a pull request to integrate our changes in the Aragon upstream project, thus leading to major open source cooperation.
