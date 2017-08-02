@@ -1,5 +1,5 @@
 {
-  "name": "bitnation framework",
+  "name": "bitnation-framework",
   "version": "1.0.0",
   "description": "solidity framework for bitnation",
   "main": "index.js",
