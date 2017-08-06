@@ -28,7 +28,7 @@ contract('ConstitutionApp', accounts => {
     })
 
     it('added the article', async () => {
-      assert.isOk(await constitutionApp.isValid(0), 'article should be considered valid')
+      assert.isOk(await constitutionApp.isValidArticle(0), 'article should be considered valid')
 
       const [summary, reference, added, repealed] = await constitutionApp.getArticle(0)
       assert.equal(summary, 'test summary 1', 'summary should match')
@@ -39,7 +39,7 @@ contract('ConstitutionApp', accounts => {
 
     it('repeal the article', async () => {
       await constitutionApp.repealArticle(0)
-      assert.isNotOk(await constitutionApp.isValid(0), 'article should be invalid')
+      assert.isNotOk(await constitutionApp.isValidArticle(0), 'article should be invalid')
     })
 
     context('adding a second article', async () => {
@@ -48,7 +48,7 @@ contract('ConstitutionApp', accounts => {
       })
 
       it('added the new article', async () => {
-        assert.isOk(await constitutionApp.isValid(1), 'article should be considered valid')
+        assert.isOk(await constitutionApp.isValidArticle(1), 'article should be considered valid')
 
         const [summary, reference, added, repealed] = await constitutionApp.getArticle(1)
         assert.equal(summary, 'test summary 2', 'summary should match')
@@ -58,7 +58,7 @@ contract('ConstitutionApp', accounts => {
 
       it('repeal the new article', async () => {
         await constitutionApp.repealArticle(1)
-        assert.isNotOk(await constitutionApp.isValid(1), 'article should be invalid')
+        assert.isNotOk(await constitutionApp.isValidArticle(1), 'article should be invalid')
       })
     })
   })

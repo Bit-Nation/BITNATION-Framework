@@ -28,7 +28,7 @@ contract('CodeOfLawApp', accounts => {
     })
 
     it('added the law', async () => {
-      assert.isOk(await codeOfLawApp.isValid(0), 'law should be considered valid')
+      assert.isOk(await codeOfLawApp.isValidLaw(0), 'law should be considered valid')
 
       const [summary, reference, added, repealed] = await codeOfLawApp.getLaw(0)
       assert.equal(summary, 'test summary 1', 'summary should match')
@@ -39,7 +39,7 @@ contract('CodeOfLawApp', accounts => {
 
     it('repeal the law', async () => {
       await codeOfLawApp.repealLaw(0)
-      assert.isNotOk(await codeOfLawApp.isValid(0), 'law should be invalid')
+      assert.isNotOk(await codeOfLawApp.isValidLaw(0), 'law should be invalid')
     })
 
     context('adding a second law', async () => {
@@ -48,7 +48,7 @@ contract('CodeOfLawApp', accounts => {
       })
 
       it('added the new law', async () => {
-        assert.isOk(await codeOfLawApp.isValid(1), 'law should be considered valid')
+        assert.isOk(await codeOfLawApp.isValidLaw(1), 'law should be considered valid')
 
         const [summary, reference, added, repealed] = await codeOfLawApp.getLaw(1)
         assert.equal(summary, 'test summary 2', 'summary should match')
@@ -58,7 +58,7 @@ contract('CodeOfLawApp', accounts => {
 
       it('repeal the new law', async () => {
         await codeOfLawApp.repealLaw(1)
-        assert.isNotOk(await codeOfLawApp.isValid(1), 'law should be invalid')
+        assert.isNotOk(await codeOfLawApp.isValidLaw(1), 'law should be invalid')
       })
     })
   })
