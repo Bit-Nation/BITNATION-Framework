@@ -46,7 +46,7 @@ contract CodeOfLawApp is ICodeOfLawApp, Application {
     * @param lawID id of the law to repeal
     */
     function repealLaw(uint lawID) onlyDAO external {
-        require(isValid(lawID)); // Do not repeal already repealed laws
+        require(isValidLaw(lawID)); // Do not repeal already repealed laws
 
         allLaws[lawID].repealedOn = now;
 
@@ -64,7 +64,7 @@ contract CodeOfLawApp is ICodeOfLawApp, Application {
         repealedOn = allLaws[lawID].repealedOn;
     }
 
-    function isValid(uint lawID) constant returns (bool isValid) {
+    function isValidLaw(uint lawID) constant returns (bool isValidLaw) {
         return allLaws[lawID].addedOn > 0 && allLaws[lawID].repealedOn == 0;
     }
 }

@@ -46,7 +46,7 @@ contract ConstitutionApp is IConstitutionApp, Application {
     * @param articleID id of the article to repeal
     */
     function repealArticle(uint articleID) onlyDAO external {
-        require(isValid(articleID)); // Do not repeal already repealed articles
+        require(isValidArticle(articleID)); // Do not repeal already repealed articles
 
         allArticles[articleID].repealedOn = now;
 
@@ -64,7 +64,7 @@ contract ConstitutionApp is IConstitutionApp, Application {
         repealedOn = allArticles[articleID].repealedOn;
     }
 
-    function isValid(uint articleID) constant returns (bool isValid) {
+    function isValidArticle(uint articleID) constant returns (bool isValidArticle) {
         return allArticles[articleID].addedOn > 0 && allArticles[articleID].repealedOn == 0;
     }
 }
