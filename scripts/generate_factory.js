@@ -11,7 +11,7 @@ const getContract = x => artifacts.require(x)
 const flatten = x => [].concat.apply([], x)
 
 const organNames = ['organs/MetaOrgan.sol', 'organs/VaultOrgan.sol', 'organs/ActionsOrgan.sol']
-const appNames = ['apps/bylaws/BylawsApp.sol', 'apps/ownership/OwnershipApp.sol', 'apps/status/StatusApp.sol', 'apps/basic-governance/VotingApp.sol']
+const appNames = ['apps/bylaws/BylawsApp.sol', 'apps/ownership/OwnershipApp.sol', 'apps/status/StatusApp.sol', 'apps/basic-governance/VotingApp.sol', 'apps/bitnation/constitution']
 const excludeOrgans = ['IOrgan'].map(getContract)
 const excludeApps = ['Application'].map(getContract)
 
