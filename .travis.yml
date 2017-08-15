@@ -1,10 +1,13 @@
 language: python
 sudo: required
 python:
-  - "3.4"
+- '3.4'
 services:
-  - docker
+- docker
 script:
-  - docker-compose run core test
+- docker-compose run core test
 after_script:
-  - docker-compose run core coveralls
+- docker-compose run core coveralls
+notifications:
+  slack:
+    secure: rGTF0dM+CK1bZxrFjzWgA9JDUxL+6i6NOGFbZQ6kMgeQRtXBqZktKP4ufFMH1XWhCFwEBgM6bUxaO+Vq7AApVNxkCInrvWFT7vYA+pVQlrKZE0RhyE52ddbjqi+3xYMgah3arGIr4R78C97fmfZoqanPWF8vgVjd9vKgYHuuRHt4fPNVnLMpQI3rBtZwZrwnUyC61+caHj3GTI7lEnPoSTveYxnQSn7Qs3acsd+G2+qr3JHAciAPGYGXf5rTIjVD/TSmTmfCY3AXoGikB1uH9ynHHuqjmZ8BeXvrE41ACMQt29e3GDAUfDfYwWKzDqC+ciphEGexMXjFxAG6WIw0SDGWnrq32pMm0hp8/rqmfBvTaw+8xmSa4n6vQGLFq964lP4uqW1m7qp1Q4CS/Zot22ZNgDM/fwFx0orOjvc2SglQNYibotWiOR+n1xiglaVXALGiyT9CiaAopdEEh0wrUkgv2Rk6PvOSv1/E0buZCEg7v5d0O7D5xt4m9t6HopqFZWp9xMOBGcsqjICPFCpGhjRUNW4aSLgOt4mcvYcHiW2/RQd+xkzvefJmA3pMRxQuc7UoFFqo69vGvI/2YET5HObS3R7RF7jZTKSS/mlbGhablQKxiymD1+k14SeMG8ERLIU1cuL07iWDv0j9DAb77nTsyzMAAtTkEk73vuS8Gvw=
